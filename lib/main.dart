@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'dart:async';
+import 'dart:convert' show json;
+
+import 'package:http/http.dart' as http;
+import 'package:google_sign_in/google_sign_in.dart';
+
+GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: <String>[
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly',
+  ],
+);
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-//    final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Startup Name Generator',
       theme: ThemeData(

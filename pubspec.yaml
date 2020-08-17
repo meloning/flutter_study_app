@@ -32,6 +32,12 @@ dependencies:
   # Step 1 Example
   english_words: ^3.1.0
 
+  # Social login
+  google_sign_in: ^4.5.1
+
+  # connection
+  http: ^0.12.0+4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
